@@ -1,0 +1,4 @@
+# Keep uploads small: the raw photo library isn't part of the site.
+Images/
+.next/
+node_modules/

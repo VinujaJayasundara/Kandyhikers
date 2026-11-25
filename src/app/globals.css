@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+/*
+  Design tokens — Kandy Hikers
+  Earthy moss green (ties to the logo), warm paper greys, sand/clay accents,
+  bold uppercase grotesk headings.
+*/
+@theme {
+  --color-paper: #eeeeea;
+  --color-card: #f7f7f4;
+  --color-line: #dcdcd5;
+  --color-ink: #1d2218;
+  --color-muted: #64695c;
+  --color-moss: #5f6a47;
+  --color-moss-dark: #3d4530;
+  --color-moss-light: #8e9873;
+  --color-sand: #e6cfae;
+  --color-clay: #d5a08b;
+  --color-sun: #e9b949;
+
+  --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-panel: 1.75rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-moss);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* ───── Destinations map ───── */
+:root {
+  --map-sea: #b9d3d6;
+  --map-sea-light: #dcebec;
+  --map-land: #e9dcc0;
+  --map-land-light: #f5eedd;
+  --map-coast: #a99a76;
+  --map-relief-1: #d7dcbc;
+  --map-relief-2: #b9c497;
+  --map-relief-3: #93a26f;
+  --map-river: #6fa8b5;
+}
+.map-label {
+  font-family: var(--font-sans);
+  paint-order: stroke;
+  stroke: rgba(255, 255, 255, 0.9);
+  stroke-width: 3.5px;
+  stroke-linejoin: round;
+}
+.map-sea-label {
+  font-family: var(--font-sans);
+  font-style: italic;
+  font-weight: 500;
+}
+.map-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: map-pulse 2s ease-out infinite;
+}
+@keyframes map-pulse {
+  from { transform: scale(0.6); opacity: 0.55; }
+  to { transform: scale(2.6); opacity: 0; }
+}
+.map-route {
+  animation: map-route 1.2s linear infinite;
+}
+@keyframes map-route {
+  to { stroke-dashoffset: -16; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .map-pulse, .map-route { animation: none; }
+  .map-pulse { opacity: 0.25; }
+}
