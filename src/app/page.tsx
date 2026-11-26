@@ -169,7 +169,7 @@ export default function Home() {
       </section>
 
       {/* ───── Popular experiences ───── */}
-      <section className="mx-auto max-w-[1400px] px-3 py-20 sm:px-6">
+      <section className="mx-auto max-w-[1400px] px-3 py-14 sm:px-6 sm:py-20">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <Tag>Popular experiences</Tag>
@@ -189,7 +189,7 @@ export default function Home() {
       </section>
 
       {/* ───── Explore by type ───── */}
-      <section className="mx-auto max-w-[1400px] px-3 py-16 sm:px-6">
+      <section className="mx-auto max-w-[1400px] px-3 py-12 sm:px-6 sm:py-16">
         <div className="text-center">
           <Tag>Explore by type</Tag>
           <h2 className="display mx-auto mt-4 max-w-4xl text-4xl text-moss-dark sm:text-6xl">
@@ -202,11 +202,11 @@ export default function Home() {
       </section>
 
       {/* ───── How it works — stacked cards ───── */}
-      <section className="mx-auto max-w-[1400px] px-3 py-20 sm:px-6">
-        <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr]">
+      <section className="mx-auto max-w-[1400px] px-3 py-14 sm:px-6 sm:py-20">
+        <div className="grid grid-cols-[minmax(0,1fr)] gap-10 lg:grid-cols-[1fr_1.4fr]">
           <div className="lg:sticky lg:top-28 lg:self-start">
             <Tag>How it works</Tag>
-            <h2 className="display mt-4 text-4xl text-moss-dark sm:text-5xl">From first message to trailhead</h2>
+            <h2 className="display mt-4 text-[2rem] text-moss-dark min-[360px]:text-4xl sm:text-5xl">From first message to trailhead</h2>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
               No booking engine and no hidden fees. Talk to a real guide, agree on the plan, and go.
             </p>
@@ -238,11 +238,11 @@ export default function Home() {
       </section>
 
       {/* ───── Packing guide (accordion) ───── */}
-      <section className="mx-auto max-w-[1400px] px-3 py-20 sm:px-6">
+      <section className="mx-auto max-w-[1400px] px-3 py-14 sm:px-6 sm:py-20">
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
             <Tag>Travel guide</Tag>
-            <h2 className="display mt-4 text-4xl text-moss-dark sm:text-5xl">What to pack for a Sri Lankan trail</h2>
+            <h2 className="display mt-4 text-[2rem] text-moss-dark min-[360px]:text-4xl sm:text-5xl">What to pack for a Sri Lankan trail</h2>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-muted">
               Tropical heat at the trailhead, cool mist on the ridge, sometimes both in one morning. Here&apos;s what our
               guides tell every group.

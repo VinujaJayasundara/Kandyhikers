@@ -39,17 +39,18 @@ export function ExperiencesBrowser({ trips, destinations }: { trips: TripCardDat
     );
   }, [trips, type, destination, difficulty, sort]);
 
-  const select = "rounded-full border border-line bg-card px-4 py-2 text-sm";
+  const select = "w-full rounded-full border border-line bg-card py-2.5 pl-3.5 pr-2 text-sm sm:w-auto sm:px-4 sm:py-2";
 
   return (
-    <div>
-      <div className="flex flex-wrap gap-2">
+    <div className="min-w-0">
+      {/* One swipeable row on phones, wraps on larger screens */}
+      <div className="relative -mx-3 flex gap-2 overflow-x-auto px-3 pb-1 [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0 [&::-webkit-scrollbar]:hidden">
         {(["all", ...Object.keys(categories)] as (Category | "all")[]).map((k) => (
           <button
             key={k}
             onClick={() => setType(k)}
             aria-pressed={type === k}
-            className={`rounded-full px-5 py-2 text-xs font-semibold uppercase tracking-widest transition-colors ${
+            className={`shrink-0 whitespace-nowrap rounded-full px-5 py-2.5 text-xs font-semibold uppercase tracking-widest transition-colors sm:py-2 ${
               type === k ? "bg-ink text-white" : "bg-card text-muted hover:text-ink"
             }`}
           >
@@ -58,7 +59,7 @@ export function ExperiencesBrowser({ trips, destinations }: { trips: TripCardDat
         ))}
       </div>
 
-      <div className="mt-4 flex flex-wrap items-center gap-3">
+      <div className="relative mt-3 grid grid-cols-2 gap-2 sm:mt-4 sm:flex sm:flex-wrap sm:items-center sm:gap-3">
         <label className="sr-only" htmlFor="f-dest">Destination</label>
         <select id="f-dest" className={select} value={destination} onChange={(e) => setDestination(e.target.value)}>
           <option value="all">All destinations</option>
@@ -79,7 +80,7 @@ export function ExperiencesBrowser({ trips, destinations }: { trips: TripCardDat
           ))}
         </select>
         <label className="sr-only" htmlFor="f-sort">Sort</label>
-        <select id="f-sort" className={`${select} sm:ml-auto`} value={sort} onChange={(e) => setSort(e.target.value as Sort)}>
+        <select id="f-sort" className={`${select} col-span-2 sm:ml-auto`} value={sort} onChange={(e) => setSort(e.target.value as Sort)}>
           <option value="featured">Sort: Popular</option>
           <option value="price-asc">Price: low to high</option>
           <option value="price-desc">Price: high to low</option>

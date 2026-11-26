@@ -32,7 +32,7 @@ export default function GuidePage() {
         </p>
       </PageHero>
 
-      <div className="mx-auto grid max-w-[1400px] gap-10 px-3 py-16 sm:px-6 lg:grid-cols-[220px_minmax(0,1fr)]">
+      <div className="mx-auto grid max-w-[1400px] grid-cols-[minmax(0,1fr)] gap-10 px-3 py-12 sm:px-6 sm:py-16 lg:grid-cols-[220px_minmax(0,1fr)]">
         {/* Table of contents */}
         <nav aria-label="On this page" className="lg:sticky lg:top-28 lg:self-start print:hidden">
           <p className="text-xs font-semibold uppercase tracking-widest text-muted">On this page</p>
@@ -90,7 +90,7 @@ export default function GuidePage() {
                             <li key={t.slug}>
                               <Link
                                 href={`/experiences/${t.slug}`}
-                                className="inline-block rounded-full bg-paper px-3 py-1 text-xs font-semibold hover:bg-moss hover:text-white"
+                                className="inline-block rounded-full bg-paper px-3 py-2 text-xs font-semibold hover:bg-moss hover:text-white"
                               >
                                 {t.title}
                               </Link>

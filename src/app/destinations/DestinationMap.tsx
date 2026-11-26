@@ -19,7 +19,7 @@ export function DestinationMap({ placeTrips }: { placeTrips: Record<string, Plac
   const list = placeTrips[place.slug] ?? [];
 
   return (
-    <div className="grid gap-3 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]">
+    <div className="grid grid-cols-[minmax(0,1fr)] gap-3 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]">
       {/* Map */}
       <div className="overflow-hidden rounded-[var(--radius-panel)] bg-card">
         <div className="bg-[var(--map-sea)]">
@@ -49,7 +49,7 @@ export function DestinationMap({ placeTrips }: { placeTrips: Record<string, Plac
                 onMouseEnter={() => setHover(p.slug)}
                 onMouseLeave={() => setHover(null)}
                 aria-pressed={p.slug === active}
-                className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold transition-colors ${
+                className={`inline-flex items-center gap-1.5 rounded-full px-3 py-2 text-xs font-semibold transition-colors ${
                   p.slug === active ? "bg-ink text-white" : "bg-paper text-muted hover:text-ink"
                 }`}
               >

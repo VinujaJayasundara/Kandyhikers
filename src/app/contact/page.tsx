@@ -53,7 +53,7 @@ export default function ContactPage() {
                     {href ? (
                       <a
                         href={href}
-                        className="text-sm font-semibold hover:underline"
+                        className="inline-block py-1 text-sm font-semibold hover:underline"
                         {...(href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                       >
                         {value}

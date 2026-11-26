@@ -117,11 +117,11 @@ export function Header() {
       {open && (
         <div className="fixed inset-x-3 bottom-3 top-[5.5rem] overflow-y-auto rounded-2xl bg-paper p-6 text-ink shadow-xl lg:hidden">
           <nav aria-label="Mobile" className="flex flex-col">
-            {nav.map((item) => (
+            {[...nav.slice(0, 3), { href: "/journal", label: "Journal" }, ...nav.slice(3)].map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="display border-b border-line py-4 text-3xl"
+                className="display border-b border-line py-3.5 text-3xl"
               >
                 {item.label}
               </Link>

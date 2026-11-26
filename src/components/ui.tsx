@@ -127,12 +127,12 @@ export function PageHero({
 }) {
   return (
     <section className="px-3 pt-3">
-      <div className="relative mx-auto flex min-h-[460px] max-w-[1400px] items-end overflow-hidden rounded-[var(--radius-panel)] bg-ink text-white">
+      <div className="relative mx-auto flex min-h-[420px] max-w-[1400px] items-end sm:min-h-[460px] overflow-hidden rounded-[var(--radius-panel)] bg-ink text-white">
         <Image src={image} alt="" fill fetchPriority="high" loading="eager" quality={60} sizes="100vw" className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/40" />
-        <div className="relative w-full px-6 pb-10 pt-32 sm:px-12">
+        <div className="relative w-full px-6 pb-10 pt-28 sm:px-12 sm:pt-32">
           {eyebrow && <Tag dark>{eyebrow}</Tag>}
-          <h1 className="display mt-4 max-w-4xl text-5xl sm:text-7xl">{title}</h1>
+          <h1 className="display mt-4 max-w-4xl text-[2.5rem] sm:text-6xl lg:text-7xl">{title}</h1>
           {children}
         </div>
       </div>

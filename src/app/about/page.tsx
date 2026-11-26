@@ -57,7 +57,7 @@ export default function AboutPage() {
       </PageHero>
 
       {/* Story */}
-      <section className="mx-auto max-w-[1400px] px-3 py-20 sm:px-6">
+      <section className="mx-auto max-w-[1400px] px-3 py-14 sm:px-6 sm:py-20">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
             <Tag>Our story</Tag>

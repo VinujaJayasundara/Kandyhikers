@@ -67,7 +67,7 @@ export default async function PostPage({ params }: PageProps<"/journal/[slug]">)
   return (
     <article className="pb-20 pt-24">
       <header className="mx-auto max-w-3xl px-4 sm:px-6">
-        <Link href="/journal" className="inline-flex items-center gap-1 text-sm text-muted hover:text-ink">
+        <Link href="/journal" className="inline-flex items-center gap-1 py-2 text-sm text-muted hover:text-ink">
           <ChevronLeft className="h-4 w-4" /> Journal
         </Link>
         <div className="mt-6">

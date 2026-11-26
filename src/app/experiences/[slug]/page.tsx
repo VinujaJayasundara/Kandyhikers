@@ -34,7 +34,7 @@ export default async function TripPage({ params }: PageProps<"/experiences/[slug
 
   return (
     <article className="mx-auto max-w-[1400px] px-3 pb-20 pt-24 sm:px-6">
-      <Link href="/experiences" className="inline-flex items-center gap-1 text-sm text-muted hover:text-ink">
+      <Link href="/experiences" className="inline-flex items-center gap-1 py-2 text-sm text-muted hover:text-ink">
         <ChevronLeft className="h-4 w-4" /> All experiences
       </Link>
 

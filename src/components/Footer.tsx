@@ -38,8 +38,8 @@ export function Footer() {
     <footer className="px-3 pb-3">
       {/* Closing CTA panel */}
       <section className="relative mx-auto max-w-[1400px] overflow-hidden rounded-t-[var(--radius-panel)] bg-moss text-white">
-        <div className="relative z-10 flex flex-col gap-6 px-6 pb-40 pt-14 sm:px-12 md:flex-row md:items-start md:justify-between md:pb-56">
-          <h2 className="display max-w-3xl text-5xl sm:text-7xl lg:text-8xl">Your next summit starts here</h2>
+        <div className="relative z-10 flex flex-col gap-6 px-6 pb-28 pt-12 sm:px-12 sm:pb-40 sm:pt-14 md:flex-row md:items-start md:justify-between md:pb-56">
+          <h2 className="display max-w-3xl text-[2.75rem] sm:text-7xl lg:text-8xl">Your next summit starts here</h2>
           <Link
             href="/contact"
             className="inline-flex shrink-0 items-center gap-2 self-start rounded-full bg-white px-6 py-3 text-sm font-semibold text-ink transition-transform hover:-translate-y-0.5"
@@ -52,7 +52,7 @@ export function Footer() {
           alt=""
           width={1800}
           height={700}
-          className="absolute inset-x-0 bottom-0 h-56 w-full object-cover object-top opacity-80 mix-blend-luminosity md:h-72"
+          className="absolute inset-x-0 bottom-0 h-40 w-full object-cover sm:h-56 object-top opacity-80 mix-blend-luminosity md:h-72"
           style={{ maskImage: "linear-gradient(to bottom, transparent, black 45%)" }}
         />
       </section>
@@ -67,10 +67,10 @@ export function Footer() {
           {columns.map((col) => (
             <div key={col.title}>
               <h3 className="mb-4 font-display text-xs font-bold uppercase tracking-widest text-white">{col.title}</h3>
-              <ul className="space-y-2 text-sm">
+              <ul className="space-y-0.5 text-sm">
                 {col.links.map((l) => (
                   <li key={l.href}>
-                    <Link href={l.href} className="transition-colors hover:text-white">
+                    <Link href={l.href} className="inline-block py-1.5 transition-colors hover:text-white">
                       {l.label}
                     </Link>
                   </li>
@@ -81,10 +81,10 @@ export function Footer() {
         </div>
         <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 {site.name}. All rights reserved.</p>
-          <div className="flex gap-5">
-            <a href={site.socials.facebook} className="hover:text-white">Facebook</a>
-            <a href={site.socials.instagram} className="hover:text-white">Instagram</a>
-            <a href={site.socials.x} className="hover:text-white">X</a>
+          <div className="-my-2 flex gap-5">
+            <a href={site.socials.facebook} className="inline-block py-2 hover:text-white">Facebook</a>
+            <a href={site.socials.instagram} className="inline-block py-2 hover:text-white">Instagram</a>
+            <a href={site.socials.x} className="inline-block py-2 hover:text-white">X</a>
           </div>
         </div>
       </div>

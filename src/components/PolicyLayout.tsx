@@ -24,9 +24,9 @@ export function PolicyLayout({
 }) {
   return (
     <div className="mx-auto max-w-[1400px] px-3 pb-20 pt-28 sm:px-6">
-      <header className="rounded-[var(--radius-panel)] bg-card p-8 sm:p-12">
+      <header className="rounded-[var(--radius-panel)] bg-card p-6 min-[360px]:p-8 sm:p-12">
         <Tag>Policies</Tag>
-        <h1 className="display mt-4 text-4xl text-moss-dark sm:text-6xl">{title}</h1>
+        <h1 className="display mt-4 text-[1.85rem] text-moss-dark [overflow-wrap:anywhere] min-[360px]:text-4xl sm:text-6xl">{title}</h1>
         <p className="mt-3 text-sm text-muted">Last updated {policy.lastUpdated}</p>
         <nav aria-label="Policies" className="mt-6 flex flex-wrap gap-2">
           {policyLinks.map((l) => (
@@ -54,7 +54,7 @@ export function PolicyLayout({
         </div>
       )}
 
-      <div className="mt-12 grid gap-10 lg:grid-cols-[220px_minmax(0,1fr)]">
+      <div className="mt-12 grid grid-cols-[minmax(0,1fr)] gap-10 lg:grid-cols-[220px_minmax(0,1fr)]">
         <nav aria-label="On this page" className="lg:sticky lg:top-28 lg:self-start">
           <p className="text-xs font-semibold uppercase tracking-widest text-muted">On this page</p>
           <ol className="mt-3 space-y-1 text-sm">

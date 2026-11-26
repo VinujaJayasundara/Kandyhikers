@@ -102,3 +102,12 @@ body {
   .map-pulse, .map-route { animation: none; }
   .map-pulse { opacity: 0.25; }
 }
+
+/* iOS Safari zooms into form fields with text under 16px; keep them at 16px on phones. */
+@media (max-width: 639px) {
+  input:not([type="checkbox"]):not([type="radio"]),
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}

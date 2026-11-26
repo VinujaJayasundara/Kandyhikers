@@ -86,7 +86,7 @@ export default function DestinationsPage() {
       })}
 
       {/* When to go */}
-      <section className="mx-auto max-w-[1400px] px-3 py-20 sm:px-6">
+      <section className="mx-auto max-w-[1400px] px-3 py-14 sm:px-6 sm:py-20">
         <div id="when-to-go" className="scroll-mt-24 rounded-[var(--radius-panel)] bg-card p-6 sm:p-10">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div>
@@ -106,7 +106,7 @@ export default function DestinationsPage() {
             </ul>
           </div>
 
-          <div className="mt-8 overflow-x-auto">
+          <div className="relative mt-8 overflow-x-auto">
             <table className="w-full min-w-[560px] border-separate border-spacing-1 text-sm">
               <thead>
                 <tr>
