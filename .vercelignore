@@ -1,4 +1,6 @@
 # Keep uploads small: the raw photo library isn't part of the site.
-Images/
-.next/
-node_modules/
+# Leading "/" = only the top-level folder. Without it Vercel also skips
+# public/images (matching is case-insensitive), and the site photos 404.
+/Images/
+/.next/
+/node_modules/
